@@ -86,8 +86,8 @@ if __name__ == '__main__':
     get_value(sheetname, book)
 
     for i in range(len(question)):
-        if not question[i] and not pic[i] and not times[i]:
-            pass
+        if question[i] is None or pic[i] is None or times[i] is None:
+            continue
         result.append(f"\n'{question[i]}'的{times[i]}次测试结果：")
         print(f"\n'{question[i]}'的{times[i]}次测试结果：")
         for _ in range(times[i]):
